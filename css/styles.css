@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+:root {
+    --verde-futbol: #006400; /* Verde campo */
+    --verde-claro: #228B22;
+    --blanco: #FFFFFF;
+    --negro: #111111;
+    --gris-claro: #f0f0f0;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: var(--negro);
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+.header {
+    background: linear-gradient(to right, var(--verde-futbol), var(--verde-claro));
+    color: var(--blanco);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+}
+
+.nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav a {
+    text-decoration: none;
+    color: var(--blanco);
+    padding: 0.6rem 1.2rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    border: 2px solid transparent;
+}
+
+.nav a:hover, .nav a.activo {
+    background: var(--blanco);
+    color: var(--verde-futbol);
+    border-color: var(--blanco);
+}
+
+/* SECCIONES */
+.section {
+    padding: 4rem 0;
+    scroll-margin-top: 100px;
+}
+
+.section:nth-child(even) {
+    background-color: var(--gris-claro);
+}
+
+.contenido, .section .container {
+    text-align: center;
+}
+
+h2, .titulo {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--verde-futbol);
+}
+
+h2 span, .titulo span {
+    color: var(--negro);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.section img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    margin: 1.5rem auto;
+    border: 5px solid var(--verde-futbol);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.section p {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* LINEA DE TIEMPO */
+.linea-tiempo {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+    gap: 1.5rem;
+}
+
+.evento {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border-top: 5px solid var(--verde-futbol);
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    width: 250px;
+}
+
+.evento h3 {
+    color: var(--verde-futbol);
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--negro);
+    color: var(--blanco);
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 4px solid var(--verde-futbol);
+  }
